@@ -1,0 +1,67 @@
+:root {
+  box-sizing: border-box;
+  --modal-width: 60%;
+  --modal-height: 40%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.add-book-btn {
+  margin: 20px;
+  padding: 0.6rem 1.2rem;
+}
+
+[data-bookname] {
+  padding-left: 30px;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.no-display {
+  display: none;
+}
+
+.main.active-blur {
+  filter: blur(2px);
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  padding: 1rem;
+  position: absolute;
+  top: calc(50% - var(--modal-height) / 2);
+  bottom: calc(50% - var(--modal-height) / 2);
+  right: calc(50% - var(--modal-width) / 2);
+  left: calc(50% - var(--modal-width) / 2);
+  background-color: white;
+}
+
+.modal-close {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+input {
+  margin-top: 1px;
+  margin-bottom: 5px;
+}
